@@ -1,0 +1,51 @@
+[
+  //css
+  //这块是生产环境用的(这块是压缩后的bootstrap.css和site.css)
+  {
+    "outputFileName": "wwwroot/css/all.min.css",
+    "inputFiles": [
+      "node_modules/bootstrap/dist/css/bootstrap.css",
+      "wwwroot/css/site.css"
+    ]
+  },
+  //这块是开发环境用的
+  {
+    "outputFileName": "wwwroot/css/bootstrap.css",
+    "inputFiles": [
+      "node_modules/bootstrap/dist/css/bootstrap.css"
+    ],
+    "minify": {
+      "enabled": false //未压缩
+    }
+  },
+
+  //js
+  //生产用
+  {
+    "outputFileName": "wwwroot/js/all.min.js",
+    "inputFiles": [
+      "node_modules/jquery-slim/dist/jquery.slim.js",
+      "node_modules/popper.js/dist/js/popper.js",
+      "node_modules/bootstrap/dist/js/bootstrap.js",
+      "wwwroot/js/site.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true //重命名本地变量
+    },
+    "sourceMap": false
+  },
+  //开发用
+  {
+    "outputFileName": "wwwroot/js/vendor.js",
+    "inputFiles": [
+      "node_modules/jquery-slim/dist/jquery.slim.js",
+      "node_modules/popper.js/dist/js/popper.js",
+      "node_modules/bootstrap/dist/js/bootstrap.js"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  }
+
+]
